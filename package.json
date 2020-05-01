@@ -9,7 +9,9 @@
     "unit-test": "jest",
     "int-test": "jest --testRegex=.*\\.ispec\\.js$",
     "test": "jest --testRegex=.*\\.i?spec\\.js$",
-    "all-test:watch": "jest --watch --testRegex=.*\\.i?spec\\.js$"
+    "all-test:watch": "jest --watch --testRegex=.*\\.i?spec\\.js$",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "testResultsProcessor": "jest-junit-reporter",
@@ -37,7 +39,8 @@
     "passport-local": "^1.0.0",
     "popper.js": "^1.14.4",
     "serve-favicon": "^2.5.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.2.1",
@@ -50,5 +53,6 @@
     "sass-loader": "^7.1.0",
     "webpack": "^4.22.0",
     "webpack-cli": "^3.1.2"
-  }
+  },
+  "snyk": true
 }
